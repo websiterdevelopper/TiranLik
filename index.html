@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TiranLik - Réservez vos terrains de sport à Casablanca</title>
+    <link
+      rel="shortcut icon"
+      href="images/TIRANLIK Logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <img src="images/TIRANLIK Logo.png" alt="TiranLik logo" />
+          </div>
+          <div class="nav">
+            <ul>
+              <li><a href="index.html">something</a></li>
+              <li>
+                <a href="#">something</a>
+              </li>
+              <li>
+                <a href="">Contact us</a>
+              </li>
+              <li>
+                <button id="signup" class="contrasted">
+                  <a href="#">Sign up / Log in</a>
+                </button>
+              </li>
+              <li>
+                <button id="Partner">
+                  <a href="owner-dashboard.html">Owner area</a>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="hero"></div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="hero">
+          <h2 class="hero-title shown">TiranLik</h2>
+          <h2 class="hero-title hidden">9rib lik</h2>
+          <section class="filters-section">
+            <div class="filters">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Rechercher un terrain..."
+                  class="search-input"
+                />
+                <button class="search-btn">🔍</button>
+              </div>
+
+              <div class="filter-group">
+                <label>Sport:</label>
+                <select id="sportFilter" class="filter-select">
+                  <option value="">Tous les sports</option>
+                  <option value="Football">Football</option>
+                  <option value="Basketball">Basketball</option>
+                  <option value="Volleyball">Volleyball</option>
+                  <option value="Tennis">Tennis</option>
+                  <option value="Paddle">Paddle</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label>Quartier:</label>
+                <select id="districtFilter" class="filter-select">
+                  <option value="">Tous les quartiers</option>
+                  <option value="Maarif">Maarif</option>
+                  <option value="Anfa">Anfa</option>
+                  <option value="Ain Diab">Ain Diab</option>
+                  <option value="Hay Riad">Hay Riad</option>
+                  <option value="Sidi Maarouf">Sidi Maarouf</option>
+                  <option value="Bourgogne">Bourgogne</option>
+                  <option value="Oasis">Oasis</option>
+                  <option value="Sidi Bernoussi">Sidi Bernoussi</option>
+                  <option value="California">California</option>
+                  <option value="Belvédère">Belvédère</option>
+                  <option value="Les Almohades">Les Almohades</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label>Prix max:</label>
+                <select id="priceFilter" class="filter-select">
+                  <option value="">Tous les prix</option>
+                  <option value="150">Moins de 150 MAD</option>
+                  <option value="200">Moins de 200 MAD</option>
+                  <option value="250">Moins de 250 MAD</option>
+                  <option value="300">Moins de 300 MAD</option>
+                </select>
+              </div>
+
+              <button id="clearFilters" class="btn-secondary">
+                Effacer les filtres
+              </button>
+            </div>
+          </section>
+        </section>
+      </div>
+      <!-- Search and Filters -->
+
+      <!-- Venues Grid -->
+      <section class="venues-section">
+        <div class="container">
+          <div id="venuesGrid" class="venues-grid">
+            <!-- Venue cards will be inserted here by JavaScript -->
+          </div>
+          <div id="noResults" class="no-results" style="display: none">
+            <p>Aucun terrain trouvé avec ces critères.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 SportBooking Casa. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du terrain - SportBooking Casa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🏟️ SportBooking Casa</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="owner-dashboard.html" class="nav-link">Espace Propriétaire</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-link">← Retour à la liste</a>
+            
+            <div id="venueDetails" class="venue-detail-container">
+                <!-- Venue details will be loaded here -->
+            </div>
+
+            <!-- Booking Section -->
+            <section class="booking-section">
+                <h2>Réserver ce terrain</h2>
+                <div class="booking-container">
+                    <div class="booking-calendar">
+                        <h3>Sélectionner la date et l'heure</h3>
+                        <div class="date-picker">
+                            <label for="bookingDate">Date:</label>
+                            <input type="date" id="bookingDate" min="" required>
+                        </div>
+                        <div class="time-slots" id="timeSlots">
+                            <!-- Time slots will be generated here -->
+                        </div>
+                    </div>
+
+                    <div class="booking-form">
+                        <h3>Détails de la réservation</h3>
+                        <form id="bookingForm">
+                            <div class="form-group">
+                                <label>Date sélectionnée:</label>
+                                <input type="text" id="selectedDate" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Heure sélectionnée:</label>
+                                <input type="text" id="selectedTime" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Durée:</label>
+                                <select id="duration" required>
+                                    <option value="1">1 heure</option>
+                                    <option value="2" selected>2 heures</option>
+                                    <option value="3">3 heures</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Nom complet:</label>
+                                <input type="text" id="customerName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Téléphone:</label>
+                                <input type="tel" id="customerPhone" required>
+                            </div>
+                            <div class="price-summary">
+                                <p><strong>Prix total: <span id="totalPrice">0</span> MAD</strong></p>
+                            </div>
+                            <button type="submit" class="btn-primary btn-large">Réserver maintenant</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="reviews-section" id="reviewsSection">
+                <h2>Avis clients</h2>
+                <div id="reviewsList" class="reviews-list">
+                    <!-- Reviews will be loaded here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SportBooking Casa. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/venue-detail.js"></script>
+</body>
+</html>
+

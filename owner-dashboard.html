@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord propriétaire - SportBooking Casa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🏟️ SportBooking Casa</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="owner-dashboard.html" class="nav-link active">Espace Propriétaire</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="page-title">Tableau de bord propriétaire</h1>
+
+            <!-- Stats Overview -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total réservations</h3>
+                        <p class="stat-number" id="totalBookings">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Revenus (simulés)</h3>
+                        <p class="stat-number" id="totalRevenue">0 MAD</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Réservations à venir</h3>
+                        <p class="stat-number" id="upcomingBookings">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Taux d'occupation</h3>
+                        <p class="stat-number" id="occupancyRate">0%</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Booking Management -->
+            <section class="bookings-section">
+                <div class="section-header">
+                    <h2>Gestion des réservations</h2>
+                    <div class="filter-controls">
+                        <select id="statusFilter" class="filter-select">
+                            <option value="">Tous les statuts</option>
+                            <option value="pending">En attente</option>
+                            <option value="confirmed">Confirmé</option>
+                            <option value="cancelled">Annulé</option>
+                        </select>
+                        <input type="date" id="dateFilter" class="filter-select">
+                    </div>
+                </div>
+
+                <div class="bookings-table-container">
+                    <table class="bookings-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Terrain</th>
+                                <th>Client</th>
+                                <th>Date</th>
+                                <th>Heure</th>
+                                <th>Durée</th>
+                                <th>Prix</th>
+                                <th>Statut</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bookingsTableBody">
+                            <!-- Bookings will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Schedule Calendar -->
+            <section class="schedule-section">
+                <h2>Calendrier des réservations</h2>
+                <div class="calendar-controls">
+                    <button id="prevMonth" class="btn-secondary">← Mois précédent</button>
+                    <h3 id="currentMonth"></h3>
+                    <button id="nextMonth" class="btn-secondary">Mois suivant →</button>
+                </div>
+                <div id="calendarView" class="calendar-view">
+                    <!-- Calendar will be generated here -->
+                </div>
+            </section>
+
+            <!-- Venue Settings -->
+            <section class="settings-section">
+                <h2>Paramètres du terrain</h2>
+                <div class="settings-container">
+                    <div class="form-group">
+                        <label>Sélectionner un terrain:</label>
+                        <select id="venueSelector" class="filter-select">
+                            <option value="">Choisir un terrain...</option>
+                        </select>
+                    </div>
+                    <div id="venueSettingsForm" class="venue-settings-form" style="display: none;">
+                        <div class="form-group">
+                            <label>Nom du terrain:</label>
+                            <input type="text" id="venueName" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Prix par heure (MAD):</label>
+                            <input type="number" id="venuePrice" class="form-input" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Heure d'ouverture:</label>
+                            <input type="time" id="venueOpenTime" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Heure de fermeture:</label>
+                            <input type="time" id="venueCloseTime" class="form-input">
+                        </div>
+                        <button id="saveSettings" class="btn-primary">Enregistrer les modifications</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SportBooking Casa. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+
