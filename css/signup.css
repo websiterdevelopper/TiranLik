@@ -1,0 +1,156 @@
+body {
+  min-height: 100vh;
+  background-image: url("../images/mini\ bg\ Logo.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.sign-up-block {
+  transition: 0.3s;
+}
+
+.sign-up-block .title,
+.log-in-block .title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.valid-field {
+  border: 1px solid greenyellow;
+}
+
+.invalid-field {
+  border: 1px solid red;
+}
+
+.input-wrapper {
+  position: relative;
+  margin: 1.25rem 0;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: -0.75rem;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.toggle-password:hover {
+  color: white;
+}
+
+.toggle-password:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.eye-icon {
+  font-size: 1.25rem;
+  user-select: none;
+}
+
+.validation-message {
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  min-height: 1.25rem;
+  transition: opacity 0.3s ease;
+}
+
+.validation-message.valid {
+  color: greenyellow;
+}
+
+.validation-message.invalid {
+  color: red;
+}
+
+.password-requirements {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  font-size: 0.875rem;
+}
+
+.password-requirements li {
+  padding: 0.25rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.password-requirements li::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: red;
+}
+
+.password-requirements li.valid {
+  color: greenyellow;
+}
+
+.password-requirements li.valid::before {
+  content: "✓";
+  color: greenyellow;
+}
+
+.signup-redirect {
+  margin: 1.5rem 0 -1.5rem;
+}
+
+.signup-redirect a {
+  text-decoration: underline;
+  color: yellow;
+  font-weight: bold;
+}
+
+button {
+  margin: 0 auto;
+  display: block;
+}
+
+footer {
+  padding: 0;
+  background-color: white;
+}
+
+footer h4 {
+  margin: 0.5rem 0;
+}
+
+footer > * {
+  color: var(--main-clr);
+}

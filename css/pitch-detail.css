@@ -1,0 +1,358 @@
+/* Pitch Detail Page Styles */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+/* Header */
+.detail-header {
+  background-image: url("../images/mini bg Logo.png");
+  background-repeat: repeat;
+  padding: 1rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.detail-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-header .logo img {
+  max-width: 80px;
+}
+
+.detail-header .back-link {
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.detail-header .back-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: white;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Not Found */
+.not-found {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.not-found h2 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.not-found a {
+  display: inline-block;
+  background: var(--main-clr);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.not-found a:hover {
+  background: var(--secondary-clr);
+}
+
+/* Pitch Detail Layout */
+.pitch-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+}
+
+/* Hero Image */
+.pitch-hero {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 400px;
+}
+
+.pitch-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pitch-hero .sport-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: var(--main-clr);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Pitch Info */
+.pitch-info {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.pitch-info h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: -2px;
+}
+
+.pitch-info .location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pitch-info .location::before {
+  content: "📍";
+}
+
+.pitch-info .description {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+/* Amenities */
+.amenities {
+  margin-bottom: 2rem;
+}
+
+.amenities h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: -1px;
+}
+
+.amenities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.amenities-list span {
+  background: #e8f5e9;
+  color: var(--main-clr);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.detail-item {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.detail-item .label {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-item .value {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Booking Card */
+.booking-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+}
+
+.booking-card .price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--main-clr);
+  font-family: "Antonio", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.booking-card .price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.booking-card .divider {
+  height: 1px;
+  background: #eee;
+  margin: 1.5rem 0;
+}
+
+.booking-card h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: 0;
+}
+
+.booking-card .form-group {
+  margin-bottom: 1rem;
+}
+
+.booking-card label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.booking-card input,
+.booking-card select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+.booking-card input:focus,
+.booking-card select:focus {
+  outline: none;
+  border-color: var(--main-clr);
+}
+
+.booking-card .book-btn {
+  width: 100%;
+  background: var(--main-clr);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.booking-card .book-btn:hover {
+  background: var(--secondary-clr);
+  transform: scale(1.02);
+}
+
+.booking-card .contact-info {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.booking-card .contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pitch-detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-card {
+    position: static;
+  }
+
+  .pitch-hero {
+    height: 300px;
+  }
+
+  .pitch-info h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pitch-hero {
+    height: 250px;
+  }
+}

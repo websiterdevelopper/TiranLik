@@ -1,0 +1,297 @@
+/* Booking Confirmation Page Styles */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+/* Header */
+.confirm-header {
+  background-image: url("../images/mini bg Logo.png");
+  background-repeat: repeat;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.confirm-header .container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.confirm-header .logo img {
+  max-width: 80px;
+}
+
+.confirm-header h2 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* No Booking Data */
+.no-booking {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.no-booking h2 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.no-booking p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.no-booking a {
+  display: inline-block;
+  background: var(--main-clr);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.no-booking a:hover {
+  background: var(--secondary-clr);
+}
+
+/* Confirmation Card */
+.confirmation-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.confirmation-header {
+  background: linear-gradient(135deg, var(--main-clr) 0%, var(--secondary-clr) 100%);
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.confirmation-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: -1px;
+}
+
+.confirmation-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.confirmation-body {
+  padding: 2rem;
+}
+
+/* Pitch Preview */
+.pitch-preview {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #eee;
+}
+
+.pitch-preview-image {
+  width: 200px;
+  height: 150px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.pitch-preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pitch-preview-info h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: -1px;
+}
+
+.pitch-preview-info .location {
+  color: #666;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pitch-preview-info .sport-badge {
+  display: inline-block;
+  background: var(--main-clr);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Reservation Details */
+.reservation-details {
+  margin-bottom: 2rem;
+}
+
+.reservation-details h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: -1px;
+}
+
+.details-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 0.5rem;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: #555;
+}
+
+.detail-row .value {
+  color: #222;
+  font-size: 1.05rem;
+}
+
+.detail-row.total {
+  background: var(--main-clr);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.detail-row.total .label,
+.detail-row.total .value {
+  color: white;
+}
+
+/* Action Buttons */
+.confirmation-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.confirm-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn {
+  background: var(--main-clr);
+  color: white;
+}
+
+.confirm-btn:hover {
+  background: var(--secondary-clr);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-btn {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background: #d0d0d0;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .confirm-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .confirmation-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .pitch-preview {
+    flex-direction: column;
+  }
+
+  .pitch-preview-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .confirmation-actions {
+    flex-direction: column;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
