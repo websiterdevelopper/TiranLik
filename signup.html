@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/signup.css" />
+    <link
+      rel="shortcut icon"
+      href="images/TIRANLIK Logo.png"
+      type="image/x-icon"
+    />
+    <title>Sign up page - TiranLik</title>
+  </head>
+  <body>
+    <main>
+      <!-- Modify to login things -->
+      <div class="sign-up-block">
+        <div class="title">
+          <h2>Create an account. Create a conncection</h2>
+        </div>
+        <div class="sign">
+          <form>
+            <div class="input-wrapper">
+              <input
+                type="email"
+                name="user-mail"
+                id="user-mail"
+                placeholder="Enter a valid email"
+              />
+              <span class="validation-message" id="email-message"></span>
+            </div>
+            <div class="input-wrapper">
+              <div class="password-input-container">
+                <input
+                  type="password"
+                  name="user-password"
+                  id="user-password"
+                  placeholder="Enter a password"
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  id="toggle-password"
+                  aria-label="Show password"
+                >
+                  <span class="eye-icon">👁️</span>
+                </button>
+              </div>
+              <span class="validation-message" id="password-message"></span>
+              <ul class="password-requirements" id="password-requirements">
+                <li id="req-length">At least 8 characters</li>
+                <li id="req-uppercase">One uppercase letter</li>
+                <li id="req-lowercase">One lowercase letter</li>
+                <li id="req-digit">One digit</li>
+                <li id="req-special">One special character (#?!@$%^&*-)</li>
+              </ul>
+            </div>
+            <div class="input-wrapper">
+              <div class="password-input-container">
+                <input
+                  type="password"
+                  name="user-password"
+                  id="user-password"
+                  placeholder="Confirm the password"
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  id="toggle-password"
+                  aria-label="Show password"
+                >
+                  <span class="eye-icon">👁️</span>
+                </button>
+              </div>
+              <span class="validation-message" id="password-message"></span>
+            </div>
+            <button class="btn-secondary">
+              <a href="#">Create an account</a>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h4>Tiran lik. 9rib lik</h4>
+    </footer>
+    <script src="js/validation.js"></script>
+  </body>
+</html>

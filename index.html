@@ -3,135 +3,225 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TiranLik - Réservez vos terrains de sport à Casablanca</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="shortcut icon"
       href="images/TIRANLIK Logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <title>TiranLik - Making reserving pitchs easier</title>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <nav>
+    <div class="hero">
+      <!-- Header start -->
+      <header>
+        <div class="container">
           <div class="logo">
-            <img src="images/TIRANLIK Logo.png" alt="TiranLik logo" />
+            <img src="images/Transparent logo.png" alt="logo TiranLik" />
           </div>
-          <div class="nav">
+          <nav>
             <ul>
-              <li><a href="index.html">something</a></li>
+              <li><a href="">Our sports</a></li>
+              <li><a href="">Our mission</a></li>
+              <li><a href="">Contact us</a></li>
               <li>
-                <a href="#">something</a>
+                <a href="signup.html"
+                  ><button id="signUp">Sign up / Log in</button></a
+                >
               </li>
               <li>
-                <a href="">Contact us</a>
-              </li>
-              <li>
-                <button id="signup" class="contrasted">
-                  <a href="#">Sign up / Log in</a>
-                </button>
-              </li>
-              <li>
-                <button id="Partner">
-                  <a href="owner-dashboard.html">Owner area</a>
-                </button>
+                <a href="owner.html"><button id="owner">Owner space</button></a>
               </li>
             </ul>
-          </div>
-        </nav>
+          </nav>
+        </div>
+      </header>
+      <!-- Header end -->
 
-        <div class="hero"></div>
-      </div>
-    </header>
-    <main>
-      <div class="container">
-        <section class="hero">
-          <h2 class="hero-title shown">TiranLik</h2>
-          <h2 class="hero-title hidden">9rib lik</h2>
-          <section class="filters-section">
-            <div class="filters">
-              <div class="search-box">
-                <input
-                  type="text"
-                  id="searchInput"
-                  placeholder="Rechercher un terrain..."
-                  class="search-input"
-                />
-                <button class="search-btn">🔍</button>
-              </div>
-
-              <div class="filter-group">
-                <label>Sport:</label>
-                <select id="sportFilter" class="filter-select">
-                  <option value="">Tous les sports</option>
-                  <option value="Football">Football</option>
-                  <option value="Basketball">Basketball</option>
-                  <option value="Volleyball">Volleyball</option>
-                  <option value="Tennis">Tennis</option>
-                  <option value="Paddle">Paddle</option>
-                </select>
-              </div>
-
-              <div class="filter-group">
-                <label>Quartier:</label>
-                <select id="districtFilter" class="filter-select">
-                  <option value="">Tous les quartiers</option>
-                  <option value="Maarif">Maarif</option>
-                  <option value="Anfa">Anfa</option>
-                  <option value="Ain Diab">Ain Diab</option>
-                  <option value="Hay Riad">Hay Riad</option>
-                  <option value="Sidi Maarouf">Sidi Maarouf</option>
-                  <option value="Bourgogne">Bourgogne</option>
-                  <option value="Oasis">Oasis</option>
-                  <option value="Sidi Bernoussi">Sidi Bernoussi</option>
-                  <option value="California">California</option>
-                  <option value="Belvédère">Belvédère</option>
-                  <option value="Les Almohades">Les Almohades</option>
-                </select>
-              </div>
-
-              <div class="filter-group">
-                <label>Prix max:</label>
-                <select id="priceFilter" class="filter-select">
-                  <option value="">Tous les prix</option>
-                  <option value="150">Moins de 150 MAD</option>
-                  <option value="200">Moins de 200 MAD</option>
-                  <option value="250">Moins de 250 MAD</option>
-                  <option value="300">Moins de 300 MAD</option>
-                </select>
-              </div>
-
-              <button id="clearFilters" class="btn-secondary">
-                Effacer les filtres
-              </button>
-            </div>
-          </section>
-        </section>
-      </div>
-      <!-- Search and Filters -->
-
-      <!-- Venues Grid -->
-      <section class="venues-section">
+      <!-- Hero end -->
+      <div class="hero-main">
         <div class="container">
-          <div id="venuesGrid" class="venues-grid">
-            <!-- Venue cards will be inserted here by JavaScript -->
-          </div>
-          <div id="noResults" class="no-results" style="display: none">
-            <p>Aucun terrain trouvé avec ces critères.</p>
+          <section class="main-title">
+            <h2 class="hero-title shown">TiranLik</h2>
+            <h2 class="hero-title hidden">9rib lik</h2>
+          </section>
+          <section class="filters">
+            <div class="search-box">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search a zone"
+                class="search-input"
+              />
+            </div>
+
+            <div class="filter-group sport">
+              <label>Sport:</label>
+              <select id="sportFilter" class="filter-select">
+                <option value="">All sports</option>
+                <option value="Football">Football</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Volleyball">Volleyball</option>
+                <option value="Tennis">Tennis</option>
+                <option value="Paddle">Paddle</option>
+              </select>
+            </div>
+
+            <div class="filter-group date">
+              <label for="my-date-input">Select a Date:</label>
+              <input type="date" id="my-date-input" name="selectedDate" />
+            </div>
+
+            <button id="filetPage" class="btn-secondary">Search</button>
+          </section>
+        </div>
+      </div>
+      <!-- Hero end -->
+    </div>
+
+    <main>
+      <!-- Sports start -->
+      <div class="sports">
+        <div class="container">
+          <h3 class="section-header">Discover our sports</h3>
+          <div class="sports-cards">
+            <div class="card">
+              <div class="card-img">
+                <img src="images/football.jpg" alt="" />
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h4>Football</h4>
+                </div>
+                <div class="card-description">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus optio odio error id doloremque debitis deserunt eius
+                    laudantium, corporis iure aut suscipit sit minima repellat
+                    eos? Soluta ipsa accusantium natus?
+                  </p>
+                </div>
+                <!-- <div class="card-button">
+                  <button><a href="#">Discover more</a></button>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-img">
+                <img src="images/basketball.jpg" alt="" />
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h4>Basketball</h4>
+                </div>
+                <div class="card-description">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus optio odio error id doloremque debitis deserunt eius
+                    laudantium, corporis iure aut suscipit sit minima repellat
+                    eos? Soluta ipsa accusantium natus?
+                  </p>
+                </div>
+                <!-- <div class="card-button">
+                  <button><a href="#">Discover more</a></button>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-img">
+                <img src="images/tennis.jpg" alt="" />
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <h4>Tennis</h4>
+                </div>
+                <div class="card-description">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus optio odio error id doloremque debitis deserunt eius
+                    laudantium, corporis iure aut suscipit sit minima repellat
+                    eos? Soluta ipsa accusantium natus?
+                  </p>
+                </div>
+                <!-- <div class="card-button">
+                  <button><a href="#">Discover more</a></button>
+                </div> -->
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+      <!-- Sports end -->
+
+      <!-- Mission start -->
+      <div class="mission">
+        <div class="container">
+          <h3 class="section-header">Our mission</h3>
+          <div class="mission-grid">
+            <div class="statement">
+              <div class="statement-icon"></div>
+              <div class="statement-title"></div>
+              <div class="mission-statement">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tenetur quasi aliquam architecto delectus iusto, mollitia aut
+                  necessitatibus quis dolorum quod error quibusdam, cumque
+                  eligendi ratione atque earum ipsa incidunt. Officia.
+                </p>
+              </div>
+            </div>
+            <div class="statement">
+              <div class="statement-icon"></div>
+              <div class="statement-title"></div>
+              <div class="mission-statement">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tenetur quasi aliquam architecto delectus iusto, mollitia aut
+                  necessitatibus quis dolorum quod error quibusdam, cumque
+                  eligendi ratione atque earum ipsa incidunt. Officia.
+                </p>
+              </div>
+            </div>
+            <div class="statement statement-full">
+              <div class="statement-icon"></div>
+              <div class="statement-title"></div>
+              <div class="mission-statement">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tenetur quasi aliquam architecto delectus iusto, mollitia aut
+                  necessitatibus quis dolorum quod error quibusdam, cumque
+                  eligendi ratione atque earum ipsa incidunt. Officia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mission end -->
+
+      <!-- Join us start -->
+      <div class="join-us">
+        <div class="join-main">
+          <h3 class="section-header">Join us</h3>
+          <div class="join-cta-btns">
+            <button class="cta-join-btn filled">
+              <a href="#">Get started</a>
+            </button>
+            <button class="cta-join-btn empty">
+              <a href="#">Find out more</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Join us end -->
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2024 SportBooking Casa. Tous droits réservés.</p>
-      </div>
+    <footer>
+      <h4>Tiran lik. 9rib lik</h4>
+      <p>TiranLik &copy; 2025 - all copyrights reserved. Made with &#129655;</p>
     </footer>
-
-    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
