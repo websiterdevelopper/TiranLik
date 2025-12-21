@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/owner.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="shortcut icon"
+      href="images/TIRANLIK Logo.png"
+      type="image/x-icon"
+    />
+    <title>Owner Space - TiranLik</title>
+  </head>
+  <body>
+    <header class="owner-header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="images/TIRANLIK Logo.png" alt="TiranLik Logo" />
+        </a>
+        <h2>Owner Space</h2>
+        <nav>
+          <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="owner-dashboard">
+          <!-- Add/Edit Pitch Form -->
+          <div class="pitch-form-section">
+            <div class="section-header">
+              <h2 id="formTitle">Add New Pitch</h2>
+              <button class="btn-cancel" id="cancelEdit" style="display: none;">
+                Cancel Edit
+              </button>
+            </div>
+            <form id="pitchForm" class="pitch-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="pitchName">Pitch Name *</label>
+                  <input
+                    type="text"
+                    id="pitchName"
+                    name="pitchName"
+                    required
+                    placeholder="e.g., Terrain Al Amal"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="pitchZone">Zone *</label>
+                  <input
+                    type="text"
+                    id="pitchZone"
+                    name="pitchZone"
+                    required
+                    placeholder="e.g., Hay Mohammadi"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="pitchSport">Sport Type *</label>
+                  <select id="pitchSport" name="pitchSport" required>
+                    <option value="">Select a sport</option>
+                    <option value="Football">Football</option>
+                    <option value="Basketball">Basketball</option>
+                    <option value="Volleyball">Volleyball</option>
+                    <option value="Tennis">Tennis</option>
+                    <option value="Paddle">Paddle</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="pitchPrice">Price per Hour (DH) *</label>
+                  <input
+                    type="number"
+                    id="pitchPrice"
+                    name="pitchPrice"
+                    required
+                    min="0"
+                    step="10"
+                    placeholder="e.g., 350"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="pitchDescription">Description *</label>
+                <textarea
+                  id="pitchDescription"
+                  name="pitchDescription"
+                  rows="4"
+                  required
+                  placeholder="Describe your pitch, amenities, and what makes it special..."
+                ></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="pitchCapacity">Capacity</label>
+                  <input
+                    type="text"
+                    id="pitchCapacity"
+                    name="pitchCapacity"
+                    placeholder="e.g., 10 vs 10, 5 vs 5"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="pitchOpenHours">Open Hours</label>
+                  <input
+                    type="text"
+                    id="pitchOpenHours"
+                    name="pitchOpenHours"
+                    placeholder="e.g., 08:00 - 23:00"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="pitchPhone">Contact Phone *</label>
+                <input
+                  type="tel"
+                  id="pitchPhone"
+                  name="pitchPhone"
+                  required
+                  placeholder="e.g., +212 6 12 34 56 78"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="pitchAmenities">Amenities (comma-separated)</label>
+                <input
+                  type="text"
+                  id="pitchAmenities"
+                  name="pitchAmenities"
+                  placeholder="e.g., Artificial Turf, Floodlights, Parking, Changing Rooms"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="pitchImage">Image URL</label>
+                <input
+                  type="url"
+                  id="pitchImage"
+                  name="pitchImage"
+                  placeholder="https://example.com/image.jpg"
+                />
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-submit" id="submitBtn">
+                  Add Pitch
+                </button>
+                <button type="reset" class="btn-reset">Clear Form</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- My Pitches List -->
+          <div class="pitches-list-section">
+            <h2>My Pitches</h2>
+            <div class="pitches-stats">
+              <span id="pitchesCount">0 pitches</span>
+            </div>
+            <div class="pitches-grid" id="pitchesGrid">
+              <!-- Pitches will be loaded here -->
+            </div>
+            <div class="no-pitches" id="noPitches" style="display: none;">
+              <p>You haven't added any pitches yet.</p>
+              <p>Use the form above to add your first pitch!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h4>Tiran lik. 9rib lik</h4>
+      <p>TiranLik &copy; 2025 - all copyrights reserved.</p>
+    </footer>
+
+    <script src="js/owner.js"></script>
+  </body>
+</html>
+
