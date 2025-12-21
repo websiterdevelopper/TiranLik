@@ -57,15 +57,14 @@
     gap: 1rem;
   }
 
-  .hero header nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
+  .hero header nav {
+    display: none;
   }
 
-  .hero header nav button {
-    padding: 0.75rem 1rem;
-    font-size: 0.9rem;
+  .hero header .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   .hero header .logo img {
@@ -304,17 +303,8 @@
   }
 
   /* ========== Navigation ========== */
-  .hero header nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero header nav ul li {
-    width: 100%;
-  }
-
-  .hero header nav button {
-    width: 100%;
+  .hero header nav {
+    display: none;
   }
 
   /* ========== Filters ========== */
