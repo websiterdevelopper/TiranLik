@@ -1,0 +1,369 @@
+/* Owner Space Styles */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+/* Header */
+.owner-header {
+  background-image: url("../images/mini bg Logo.png");
+  background-repeat: repeat;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.owner-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.owner-header .logo img {
+  max-width: 80px;
+}
+
+.owner-header h2 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.owner-header .back-link {
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.owner-header .back-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: white;
+}
+
+/* Dashboard Layout */
+.owner-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Form Section */
+.pitch-form-section {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  color: #222;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: -1px;
+}
+
+.btn-cancel {
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background: #d0d0d0;
+}
+
+/* Form Styles */
+.pitch-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.875rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  background: white;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--main-clr);
+  box-shadow: 0 0 0 3px rgba(34, 83, 24, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.btn-submit,
+.btn-reset {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit {
+  background: var(--main-clr);
+  color: white;
+}
+
+.btn-submit:hover {
+  background: var(--secondary-clr);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-reset {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.btn-reset:hover {
+  background: #d0d0d0;
+}
+
+/* Pitches List Section */
+.pitches-list-section {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pitches-list-section h2 {
+  font-size: 1.75rem;
+  color: #222;
+  margin-bottom: 1rem;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: -1px;
+}
+
+.pitches-stats {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+}
+
+.pitches-stats span {
+  color: var(--main-clr);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.pitches-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Pitch Card */
+.pitch-card-owner {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.pitch-card-owner:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.pitch-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.pitch-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  font-family: "Antonio", sans-serif;
+  letter-spacing: -1px;
+}
+
+.pitch-card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-edit {
+  background: var(--main-clr);
+  color: white;
+}
+
+.btn-edit:hover {
+  background: var(--secondary-clr);
+}
+
+.btn-delete {
+  background: #d32f2f;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #b71c1c;
+}
+
+.pitch-card-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.pitch-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.pitch-info-item strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.pitch-card-description {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pitch-card-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.amenity-tag {
+  background: #e8f5e9;
+  color: var(--main-clr);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* No Pitches Message */
+.no-pitches {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #666;
+}
+
+.no-pitches p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Responsive adjustments are in responsive.css */
+
