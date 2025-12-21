@@ -1,204 +1,590 @@
-/* Responsive Design */
+/* Comprehensive Responsive Design for All Pages */
 
-/* Tablet Styles */
+/* ============================================
+   Tablet Styles (max-width: 968px)
+   ============================================ */
 @media (max-width: 968px) {
-    .hero-title {
-        font-size: 2rem;
-    }
+  /* Container adjustments */
+  .container {
+    max-width: 95%;
+    padding: 0 1rem;
+  }
 
-    .hero-subtitle {
-        font-size: 1rem;
-    }
+  /* Hero section */
+  .hero-main h2 {
+    font-size: 5rem;
+  }
 
-    .venues-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
+  .main-title {
+    height: 6rem;
+  }
 
-    .venue-detail-header {
-        grid-template-columns: 1fr;
-    }
+  /* Sports cards grid */
+  .sports-cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
 
-    .booking-container {
-        grid-template-columns: 1fr;
-    }
+  /* Pitch detail layout */
+  .pitch-detail-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .booking-card {
+    position: static;
+  }
 
-    .calendar-view {
-        grid-template-columns: repeat(7, 1fr);
-    }
+  /* Mission grid */
+  .mission-grid {
+    gap: 1.5rem;
+  }
 }
 
-/* Mobile Styles */
+/* ============================================
+   Mobile Styles (max-width: 768px)
+   ============================================ */
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  /* Container */
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
 
-    .nav {
-        width: 100%;
-        justify-content: center;
-    }
+  /* ========== Header & Navigation ========== */
+  .hero header .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-    .hero {
-        padding: 2rem 0;
-    }
+  .hero header nav {
+    display: none;
+  }
 
-    .hero-title {
-        font-size: 1.5rem;
-    }
+  .hero header .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 
-    .hero-subtitle {
-        font-size: 0.9rem;
-    }
+  .hero header .logo img {
+    max-width: 150px;
+  }
 
-    .filters {
-        flex-direction: column;
-    }
+  /* ========== Hero Section ========== */
+  .hero {
+    min-height: auto;
+    padding-bottom: 1.5rem;
+  }
 
-    .search-box {
-        width: 100%;
-    }
+  .hero-main {
+    margin: 1.5rem 0;
+  }
 
-    .filter-group {
-        width: 100%;
-    }
+  .hero-main h2 {
+    font-size: 3.5rem;
+  }
 
-    .filter-select {
-        width: 100%;
-    }
+  .main-title {
+    height: 5rem;
+  }
 
-    .venues-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+  /* ========== Filters ========== */
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
 
-    .venue-card-image {
-        height: 180px;
-    }
+  .search-box,
+  .filter-group {
+    width: 100%;
+    min-width: unset;
+  }
 
-    .venue-detail-image {
-        height: 250px;
-    }
+  .btn-secondary,
+  .btn-clear {
+    width: 100%;
+  }
 
-    .booking-container {
-        grid-template-columns: 1fr;
-    }
+  /* ========== Sports Section ========== */
+  .sports h3.section-header {
+    font-size: 2rem;
+  }
 
-    .time-slots {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .sports-cards {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
 
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
+  /* ========== Mission Section ========== */
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
+  .mission-grid .statement-full {
+    grid-column: 1;
+  }
 
-    .filter-controls {
-        width: 100%;
-        flex-direction: column;
-    }
+  .mission-grid .statement {
+    padding: 1.5rem;
+  }
 
-    .filter-controls .filter-select {
-        width: 100%;
-    }
+  /* ========== Join Us Section ========== */
+  .join-us {
+    min-height: 40vh;
+    padding: 2rem 1rem;
+  }
 
-    .bookings-table-container {
-        overflow-x: scroll;
-    }
+  .join-us .join-main {
+    width: 90%;
+  }
 
-    .bookings-table {
-        min-width: 800px;
-    }
+  .join-us h3 {
+    font-size: 2rem;
+  }
 
-    .calendar-controls {
-        flex-direction: column;
-        gap: 1rem;
-    }
+  .join-us .join-cta-btns {
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .calendar-view {
-        grid-template-columns: repeat(7, 1fr);
-        gap: 0.25rem;
-    }
+  .join-us .join-cta-btns button {
+    width: 100%;
+  }
 
-    .calendar-day {
-        padding: 0.25rem;
-        font-size: 0.85rem;
-    }
+  /* ========== Pitch List Page ========== */
+  .pitch-list-header .header-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
 
-    .confirmation-container {
-        padding: 2rem 1rem;
-    }
+  .pitch-list-header h2 {
+    font-size: 1.75rem;
+  }
 
-    .page-title {
-        font-size: 1.8rem;
-    }
+  .pitch-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  /* ========== Pitch Detail Page ========== */
+  .pitch-detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .pitch-hero {
+    height: 250px;
+  }
+
+  .pitch-info h1 {
+    font-size: 2rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ========== Booking Confirmation Page ========== */
+  .confirm-header .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .confirm-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .confirmation-card {
+    margin: 0 1rem;
+  }
+
+  .confirmation-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .pitch-preview {
+    flex-direction: column;
+  }
+
+  .pitch-preview-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .confirmation-actions {
+    flex-direction: column;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  /* ========== Booking Success Page ========== */
+  .success-header .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .success-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .success-card {
+    margin: 0 1rem;
+  }
+
+  .success-header-section h1 {
+    font-size: 2rem;
+  }
+
+  .success-icon {
+    font-size: 3rem;
+  }
+
+  .pitch-preview {
+    flex-direction: column;
+  }
+
+  .pitch-preview-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .success-actions {
+    flex-direction: column;
+  }
+
+  /* ========== Signup/Login Pages ========== */
+  .sign-up-block .title h2 {
+    font-size: 2rem;
+  }
+
+  .sign-up-block .title h3 {
+    font-size: 1.5rem;
+  }
+
+  .input-wrapper {
+    margin: 1rem 0;
+  }
+
+  .password-requirements {
+    font-size: 0.8rem;
+  }
+
+  .password-requirements li {
+    padding: 0.2rem 0;
+    padding-left: 1.25rem;
+  }
+
+  /* ========== Owner Space ========== */
+  .owner-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .owner-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .owner-dashboard {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pitch-form-section {
+    position: static;
+    padding: 1.5rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pitch-card-info {
+    grid-template-columns: 1fr;
+  }
+
+  .pitch-card-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pitch-card-actions {
+    width: 100%;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    flex: 1;
+  }
 }
 
-/* Small Mobile Styles */
+/* ============================================
+   Small Mobile Styles (max-width: 480px)
+   ============================================ */
 @media (max-width: 480px) {
-    .logo h1 {
-        font-size: 1.2rem;
-    }
+  /* ========== Hero Section ========== */
+  .hero-main h2 {
+    font-size: 2.5rem;
+  }
 
-    .nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+  .main-title {
+    height: 4rem;
+  }
 
-    .nav-link {
-        width: 100%;
-        text-align: center;
-    }
+  .hero header .logo img {
+    max-width: 120px;
+  }
 
-    .hero-title {
-        font-size: 1.3rem;
-    }
+  /* ========== Navigation ========== */
+  .hero header nav {
+    display: none;
+  }
 
-    .venue-card-content {
-        padding: 1rem;
-    }
+  /* ========== Filters ========== */
+  .filter-group label {
+    font-size: 0.8rem;
+  }
 
-    .venue-card-title {
-        font-size: 1.1rem;
-    }
+  .search-input,
+  .filter-select,
+  .filter-group.date input[type="date"] {
+    padding: 0.9rem 1.2rem;
+    font-size: 0.9rem;
+  }
 
-    .time-slots {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  /* ========== Sports Cards ========== */
+  .sports h3.section-header {
+    font-size: 1.75rem;
+    padding: 0.75rem 0;
+  }
 
-    .confirmation-details {
-        padding: 1rem;
-    }
+  .sports-cards .card-body {
+    padding: 0.75rem 1rem;
+  }
 
-    .confirmation-detail-row {
-        flex-direction: column;
-        gap: 0.25rem;
-    }
+  .sports-cards .card-body h4 {
+    font-size: 1.1rem;
+  }
 
-    .stat-card {
-        padding: 1.5rem;
-    }
+  /* ========== Mission Section ========== */
+  .mission-grid .statement {
+    padding: 1rem;
+  }
 
-    .stat-number {
-        font-size: 2rem;
-    }
+  .mission-grid .statement-title {
+    font-size: 1.25rem;
+  }
+
+  /* ========== Pitch Cards ========== */
+  .pitch-card .pitch-title {
+    font-size: 1.1rem;
+  }
+
+  .pitch-card .pitch-price {
+    font-size: 1.2rem;
+  }
+
+  .pitch-card .view-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* ========== Pitch Detail ========== */
+  .pitch-info h1 {
+    font-size: 1.75rem;
+  }
+
+  .pitch-info .description {
+    font-size: 0.95rem;
+  }
+
+  .amenities-list {
+    gap: 0.5rem;
+  }
+
+  .amenities-list span {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .booking-card {
+    padding: 1.5rem;
+  }
+
+  .booking-card .price {
+    font-size: 2rem;
+  }
+
+  /* ========== Confirmation & Success Pages ========== */
+  .confirmation-header h1,
+  .success-header-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .confirmation-header p,
+  .success-header-section p {
+    font-size: 1rem;
+  }
+
+  .reservation-number .number {
+    font-size: 1.4rem;
+  }
+
+  .pitch-preview-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .detail-row {
+    padding: 0.75rem;
+  }
+
+  .detail-row .value {
+    font-size: 1rem;
+  }
+
+  .confirm-btn,
+  .cancel-btn,
+  .pdf-btn,
+  .home-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* ========== Signup/Login ========== */
+  .sign-up-block .title h2 {
+    font-size: 1.75rem;
+  }
+
+  .sign-up-block .title h3 {
+    font-size: 1.25rem;
+  }
+
+  /* ========== Owner Space ========== */
+  .owner-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .pitch-form-section {
+    position: static;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pitch-card-info {
+    grid-template-columns: 1fr;
+  }
+
+  input {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .toggle-password {
+    right: 0.75rem;
+  }
+
+  .eye-icon {
+    font-size: 1.1rem;
+  }
+
+  .validation-message {
+    font-size: 0.8rem;
+  }
+
+  .password-requirements {
+    font-size: 0.75rem;
+  }
+
+  /* ========== Footer ========== */
+  footer {
+    padding: 1rem;
+  }
+
+  footer h4 {
+    font-size: 1.25rem;
+  }
+
+  footer p {
+    font-size: 0.75rem;
+  }
 }
 
+/* ============================================
+   Extra Small Mobile Styles (max-width: 360px)
+   ============================================ */
+@media (max-width: 360px) {
+  .hero-main h2 {
+    font-size: 2rem;
+  }
 
+  .main-title {
+    height: 3.5rem;
+  }
 
+  .container {
+    padding: 0 0.75rem;
+  }
 
+  .sports h3.section-header,
+  .confirm-header h2,
+  .success-header h2,
+  .pitch-list-header h2 {
+    font-size: 1.5rem;
+  }
 
+  .pitch-card .pitch-title {
+    font-size: 1rem;
+  }
 
+  .pitch-info h1 {
+    font-size: 1.5rem;
+  }
 
+  .booking-card {
+    padding: 1rem;
+  }
 
+  .confirmation-card,
+  .success-card {
+    margin: 0 0.5rem;
+  }
+}
 
+/* ============================================
+   Landscape Mobile (max-height: 500px)
+   ============================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .hero-main {
+    margin: 1rem 0;
+  }
+
+  .main-title {
+    height: 4rem;
+  }
+
+  .hero-main h2 {
+    font-size: 3rem;
+  }
+}
